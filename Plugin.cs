@@ -315,7 +315,8 @@ namespace BossNotifier {
                 if (ClientAppUtils.GetMainApp().GetClientBackEndSession() == null) {
                     Instance.intelCenterLevel = 0;
                 } else {
-                    Instance.intelCenterLevel = ClientAppUtils.GetMainApp().GetClientBackEndSession().Profile.Hideout.Areas[11].Level;
+                    Instance.intelCenterLevel = 0;
+                    //Instance.intelCenterLevel = ClientAppUtils.GetMainApp().GetClientBackEndSession().Profile.Hideout.Areas[11].Level;
                 }
             }
         }

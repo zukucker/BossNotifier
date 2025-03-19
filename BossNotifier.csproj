@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BossNotifier</RootNamespace>
     <AssemblyName>BossNotifier</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -56,6 +56,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>References\Comfort.dll</HintPath>
     </Reference>
+    <Reference Include="netstandard" />
     <Reference Include="spt-reflection">
       <HintPath>References\spt-reflection.dll</HintPath>
     </Reference>
@@ -70,7 +71,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir $(TargetDir)BepInEx\plugins\
-copy /Y "$(TargerDir)$(TargetFileName)" "C:\Games\SPT 3.10.3\BepInEx\plugins\$(TargetFileName)"
+copy /Y "$(TargerDir)$(TargetFileName)" "C:\SPT-3.11\BepInEx\plugins\$(TargetFileName)"
 copy /Y "$(TargetDir)$(TargetFileName)" "$(TargetDir)BepInEx\plugins\$(TargetFileName)"
 powershell.exe -command Compress-Archive -Force -Path BepInEx $(TargetName).zip</PostBuildEvent>
   </PropertyGroup>
